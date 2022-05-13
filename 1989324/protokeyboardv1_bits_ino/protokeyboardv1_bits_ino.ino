@@ -6,7 +6,7 @@
  *    
  *    More info: https://www.hackster.io/cameroncoward/64-key-prototyping-keyboard-matrix-for-arduino-4c9531
  */
-
+#include <Keyboard.h>
 const int rowData = 2; // shift register Data pin for rows
 const int rowLatch = 3; // shift register Latch pin for rows
 const int rowClock = 4; // shift register Clock pin for rows
@@ -144,6 +144,7 @@ bool fn = false;  // is the function key pressed?
 
 void setup() {
   Serial.begin(9600);
+
 
   // setup all column pin as inputs with internal pullup resistors
   pinMode(colA, INPUT_PULLUP); 
